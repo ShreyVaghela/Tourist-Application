@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tourism Canada</string>
+    <string name="search_hint">Search location (e.g. Montreal)</string>
+    <string name="search_title">Search</string>
+</resources>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Invoice</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+
+  <body>
+    <a href="https://d1ucfwqod3mzmf.cloudfront.net/"class="btn btn-primary"> Home</a>
+    <div class="container mt-5">
+      <div class="card">
+        
+        <div class="card-header ">
+           <span class="text-left"> <strong>{{result.user}}</strong></span></br>
+          <span class="text-right"> Invoice #:
+          <strong>{{invoice_id}}</strong></br>
+          Date:<strong> {{result.booking_date}}</strong></span>
+        
+        </div>
+
+        <div class="card-body">
+          <div class="row mb-4">
+            <div class="col-sm-6">
+              <h6 class="mb-3">From:</h6>
+              <div>
+                <strong>{{result.source}}</strong>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <h6 class="mb-3">To:</h6>
+              <div>
+                <strong>{{result.destination}}</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive-sm">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Bus No</th>
+                  <th>Date</th>
+                  <th class="right">Arrival time</th>
+                  <th class="center">Departure time</th>
+                  <th class="right">Number of passengers</th>
+                  <th class="right">Unit price</th>
+                  <th class="right">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="center">{{result.bus_no}}</td>
+                  <td class="left strong">{{result.travel_date}}</td>
+                  <td class="left">{{result.arr_time}}</td>
+
+                  <td class="right">{{result.dep_time}}</td>
+                  <td class="center">{{result.num_passengers}}</td>
+                  <td class="right">{{result.unit_price}}</td>
+                  <td class="right">{{result.total}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <form>
+
+</form>
+ <input class="btn btn-primary mt-2" value="Print" onClick="javascript:window.print()">
+    </div>
+   
+  </body>
+</html>
